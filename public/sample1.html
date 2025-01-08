@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Okomo360-VideoPlayer</title>
+    <link rel="stylesheet" href="style.css" class="css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <div class="btn-container" id="lvbtns">
+
+      <button id="volumeButton" class="btn">
+        <i class="fa-solid fa-volume-xmark"></i>
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+
+      <button id="globe" class="btn">
+        <i class="fa-solid fa-globe"></i>
+      </button>
+
+      <button id="vrBtn" class="btn">
+        <i class="fa-solid fa-vr-cardboard"></i>
+      </button>
+
+    </div>
+
+    <script src="three.min.js"></script>
+    <script src="panolens.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        // Fetch the updated click count from the API
+    fetch('/api/click-count')
+      .then(response => response.json()) // Parse the JSON response
+      .then(data => {
+        console.log("Updated click count for /sample1:", data.clicks);
+      })
+      .catch(error => {
+        console.error("Error fetching click count:", error);
+      });
+    </script>
+    
+  </body>
+</html>

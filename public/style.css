@@ -1,0 +1,39 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .btn-container{
+    position: absolute;
+    bottom: 44px;
+    right: 0%;
+    display: flex;
+    gap: 0rem;
+  }
+  .btn {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: azure;
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 4px black;
+  }
+  
+  .btn .fa-volume-high {
+    display: none;
+  }
+  .muted .fa-volume-xmark {
+    display: none;
+  }
+  .muted .fa-volume-high {
+    display: block;
+  }
+  

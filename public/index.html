@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        color: azure;
+      }
+      ::-webkit-scrollbar {
+        width: 0%;
+      }
+      #index {
+        width: 100%;
+        height: max-content;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .video-card {
+        width: 400px;
+        height: 300px;
+        background-color: red;
+        border-radius: 1rem;
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+      }
+      .video-profile {
+        width: 100%;
+        height: 100%;
+      }
+      .video-profile img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+      }
+      .video-card:hover .video-profile img {
+        scale: 1.1;
+      }
+      .video-info {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.297);
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        color: azure;
+        text-shadow: 1px 1px 2px black;
+      }
+      .name {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .okomo-home {
+        position: fixed;
+        bottom: 2.5%;
+        right: 1%;
+        width: auto;
+        height: 30px;
+      }
+      .background {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+        background-image: url("assets/sample.jpg");
+        background-size: 100% 100%;
+        filter: blur(4px);
+        transition: all 0.5s ease-in-out;
+      }
+      @media (max-width: 786px) {
+        #index {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div id="index">
+        <div class="video-card" data-id="sample1">
+            <div class="video-profile">
+              <img src="assets/sample.jpg" alt="sample" />
+            </div>
+            <div class="video-info">
+              <div class="name">Wedding Video 1</div>
+            </div>
+          </div>
+    </div>
+    <div class="okomo-home">
+      <a href="https://okomo360.in/"><img src="logo.png" alt="" /></a>
+    </div>
+    <script>
+       let card = document.querySelector('.video-card')
+       card.addEventListener('click', ()=>{
+        window.location.href = `sample1`;
+       })
+    </script>
+  </body>
+</html>
